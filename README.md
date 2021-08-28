@@ -7,7 +7,7 @@
 ## https://1xhkelgmxi.execute-api.us-east-1.amazonaws.com/dev/users/
 
 
-#### Usuarios por ID
+#### Busca de Usuario por ID
 ## https://1xhkelgmxi.execute-api.us-east-1.amazonaws.com/dev/users/:id
 
 ### NOTA: ESTA API É PUBLICA.
