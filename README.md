@@ -1,5 +1,5 @@
 ### API criada com Serverless , Node JS && Express,
-### Dynamo DB e Deploy realizado no Amazon AWS
+### Dynamo DB e Deploy realizado no Amazon com CloudFormation , S3 e Lambda
 
 #### Todos os usuarios:
 ## https://1xhkelgmxi.execute-api.us-east-1.amazonaws.com/dev/users/
