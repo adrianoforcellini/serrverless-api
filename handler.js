@@ -41,8 +41,8 @@ app.get("/users", async function (req, res) {
   try {
     const { Items } = await dynamoDbClient.scan(params).promise();
     if (Items) {
-      const byId = Items.sort((a, b) => a.userId - b.userId);
-      res.json({ byId, Items });
+      const ById = Items.sort((a, b) => a.userId - b.userId);
+      res.json({ ById, ByName: Items });
     } else {
       res.status(404).json({ error: "No users found" });
     }
