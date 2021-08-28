@@ -33,6 +33,25 @@ app.get("/users/:userId", async function (req, res) {
   }
 });
 
+app.get("/users", async function (req, res) {
+  const params = {
+    TableName: USERS_TABLE,
+  };
+
+  try {
+    const { Items } = await dynamoDbClient.scan(params).promise();
+    if (Items) {
+      const byId = Items.sort((a, b) => a.userId - b.userId);
+      res.json({ byId, Items });
+    } else {
+      res.status(404).json({ error: "No users found" });
+    }
+  } catch (error) {
+    console.log(error);
+    res.status(500).json({ error: "Could not retreive users" });
+  }
+});
+
 app.post("/users", async function (req, res) {
   const { userId, name } = req.body;
   if (typeof userId !== "string") {
@@ -63,6 +82,5 @@ app.use((req, res, next) => {
     error: "Not Found",
   });
 });
-
 
 module.exports.handler = serverless(app);
