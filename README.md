@@ -8,7 +8,7 @@
 
 
 ## Usuarios por ID
-## https://1xhkelgmxi.execute-api.us-east-1.amazonaws.com/dev/users/
+## https://1xhkelgmxi.execute-api.us-east-1.amazonaws.com/dev/users/:id
 
 ### NOTA: ESTA API É PUBLICA.
 ### QUALQUER PALAVRA INDEVIDA OU OFENSIVA 
